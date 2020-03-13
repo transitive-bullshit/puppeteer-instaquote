@@ -1,6 +1,5 @@
 'use strict'
 
-const ow = require('ow')
 const puppeteer = require('puppeteer')
 
 const { cssifyObject } = require('css-in-js-utils')
@@ -32,21 +31,12 @@ module.exports = async (opts) => {
     author,
     background,
     output,
-    quoteSize = 0.75,
     width = 1080,
     height = 1080,
     style = {},
     quoteStyle = {},
     authorStyle = {}
   } = opts
-
-  // ow(output, 'output')
-  // ow(quote, 'quote')
-  // ow(author, 'author')
-  // ow(background, 'background')
-  // ow(style, 'style')
-  // ow(quoteStyle, 'quoteStyle')
-  // ow(authorStyle, 'authorStyle')
 
   const bgUri = await getImage(background)
 

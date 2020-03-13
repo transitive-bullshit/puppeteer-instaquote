@@ -114,7 +114,7 @@ for (let i = 0; i < quotes.length; ++i) {
   }
 }
 
-async function main() {
+async function main () {
   await pMap(
     memes,
     async (meme) => {

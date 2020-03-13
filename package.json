@@ -8,7 +8,9 @@
   "engines": {
     "node": ">=10"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "standard"
+  },
   "dependencies": {
     "css-in-js-utils": "^3.0.4",
     "csv-parse": "^4.8.8",
@@ -17,5 +19,8 @@
     "ow": "^0.17.0",
     "p-map": "^4.0.0",
     "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }
