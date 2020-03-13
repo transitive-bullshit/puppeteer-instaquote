@@ -1,0 +1,23 @@
+{
+  "name": "wendy-memes",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TODO",
+  "repository": "saasify-sh/wendy-memes",
+  "author": "Saasify <dev@saasify.sh>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {},
+  "dependencies": {
+    "css-in-js-utils": "^3.0.4",
+    "csv-parse": "^4.8.8",
+    "datauri": "^2.0.0",
+    "is-url-superb": "^3.0.0",
+    "ow": "^0.17.0",
+    "p-map": "^4.0.0",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {}
+}
