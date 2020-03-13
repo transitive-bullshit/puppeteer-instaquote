@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-1-bg-1.png)
+
 # Puppeteer Instaquote
 
 > Instaquote / meme image generator using Puppeteer.
@@ -22,7 +24,6 @@ See [demo.js](./demo.js) for example usage.
 
 ## Examples
 
-![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-1-bg-1.png)
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-4-bg-6.png)
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-2-bg-3.png)
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-3-bg-8.png)
