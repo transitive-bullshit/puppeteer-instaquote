@@ -5,6 +5,7 @@
   "repository": "transitive-bullshit/puppeteer-instaquote",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
+  "main": "index.js",
   "engines": {
     "node": ">=10"
   },
