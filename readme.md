@@ -16,13 +16,11 @@ The first input is an excel spreadsheet containing two columns, one for **Author
 
 The second input is a list of background images with some optional styles specific to each background image. So for a given background image, you could specify that you want to use a specific font, text color, padding (to identify the space within the output image that you want the text to fit within). It supports any CSS styles and any font from [Google Fonts](https://fonts.google.com/).
 
-It performs **auto-sizing of the text** within the background image's specified padding area, so short quotes will use larger font sizes and longer quotes will automatically use smaller font sizes to ensure that no matter what input you give, the output text will always "fit" within the desired bounds.
+It performs **auto-sizing of the content** within the background image's specified padding area, so short quotes will use larger font sizes and longer quotes will automatically use smaller font sizes. This ensures that no matter what input is given, the output text will always "fit" within the desired bounds assuming those bounds have been configured correctly via the `opts.styles.padding`.
+
+See [demo.js](./demo.js) for example usage.
 
 ## Examples
-
-This repo comes with a demo containing 10 quotes rendered for each of the 9 example background images (so 90 images in total for this demo). This examples use the following Google Fonts: Caveat, Sacramento, Dancing Script, Great Vibes, Rochester, and Calligraffitti.
-
-See [media/output](./media/output) for the full list of example output images.
 
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-1-bg-1.png)
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-4-bg-6.png)
@@ -30,9 +28,13 @@ See [media/output](./media/output) for the full list of example output images.
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-3-bg-8.png)
 ![](https://raw.githubusercontent.com/transitive-bullshit/puppeteer-instaquote/master/media/output/quote-8-bg-10.png)
 
-## Running the demo
+## Demo
 
-Clone locally, then run `yarn` to install dependencies, then `node demo.js` to generate the output images.
+This repo comes with a demo containing 10 quotes rendered for each of the 9 example background images (so 90 images in total for this demo). This examples use the following Google Fonts: Caveat, Sacramento, Dancing Script, Great Vibes, Rochester, and Calligraffitti.
+
+See [media/output](./media/output) for the full list of example output images.
+
+To run the demo, clone this repo locally, then run `yarn` to install dependencies, then `node demo.js` to generate the output images.
 
 ## API
 
@@ -49,16 +51,16 @@ The generated html page is returned as a string for debugging and batch renderin
 
 Type: `function (opts): Promise`
 
--   `opts` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Configuration options
-    -   `opts.output` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Path of image file to store result
-    -   `opts.quote` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Main text (or html) of the content to render.
-    -   `opts.author` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Main text (or html) of the sub-header (content author).
-    -   `opts.background` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Background image either as a local file path or as a URL (defaults to a transparent background).
-    -   `opts.width` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Optional width of output image (optional, default `1080`)
-    -   `opts.height` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Optional height of output image (optional, default `1080`)
-    -   `opts.style` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Top-level [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the top-level container div. (optional, default `{}`)
-    -   `opts.quoteStyle` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Quote / main content [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the main content div. (optional, default `{}`)
-    -   `opts.authorStyle` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Author [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the author's div. (optional, default `{}`)
+- `opts` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Configuration options
+  - `opts.output` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Path of image file to store result
+  - `opts.quote` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Main text (or html) of the content to render.
+  - `opts.author` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Main text (or html) of the sub-header (content author).
+  - `opts.background` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Background image either as a local file path or as a URL (defaults to a transparent background).
+  - `opts.width` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Optional width of output image (optional, default `1080`)
+  - `opts.height` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Optional height of output image (optional, default `1080`)
+  - `opts.style` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Top-level [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the top-level container div. (optional, default `{}`)
+  - `opts.quoteStyle` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Quote / main content [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the main content div. (optional, default `{}`)
+  - `opts.authorStyle` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Author [CSS styles](https://www.w3schools.com/jsref/dom_obj_style.asp) to apply to the author's div. (optional, default `{}`)
 
 ## License
 
