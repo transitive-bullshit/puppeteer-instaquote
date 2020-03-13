@@ -1,8 +1,7 @@
 {
   "name": "puppeteer-instaquote",
   "version": "0.1.0",
-  "private": true,
-  "description": "TODO",
+  "description": "Instaquote / meme image generator using Puppeteer for rendering.",
   "repository": "transitive-bullshit/puppeteer-instaquote",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
